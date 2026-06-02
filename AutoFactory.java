@@ -9,7 +9,7 @@ public class AutoFactory {
 
     /**
      * Erzeugt ein neues Auto objekt mit id, farbe und marke.
-     * dfsdfsd
+     * dfsdfsddasadsas
      * @return Das Neu erzeugte Auto objekt
      */
     public Auto createAuto(){
