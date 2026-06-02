@@ -17,6 +17,8 @@ public class AutoFactory {
         int markenIndex = random.nextInt(AutoMarken.values().length);
         AutoMarken autoMarke = AutoMarken.values()[markenIndex];
 
+        // Test
+
         Auto auto = new Auto(id ,"Rot",autoMarke);
         this.id++;
         return auto;
