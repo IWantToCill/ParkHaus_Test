@@ -12,6 +12,7 @@ public class Auto {
         this.id = id;
         this.farbe = farbe;
         this.marke = marke;
+        IO.println("TEST");
     }
 
     /**
