@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 void main() {
     Scanner scanner = new Scanner(System.in); //neuer scanner wird erstellt? // \(o.o)/
-    IO.println(String.format("Hello and welcome!"));
+    IO.println(String.format("Hello and a happy welcome!"));
 
     Parkhaus cityParkhaus = new Parkhaus(3); // parkheuser werden erstellt mus noch liste / stadt plan anlegen
     Parkhaus magicParkhaus = new Parkhaus(9999);
