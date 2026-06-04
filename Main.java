@@ -12,12 +12,13 @@ void main() {
     ArrayList<Auto> alleAutos = new ArrayList<Auto> (); // gess wat Alle autos liste
     ArrayList<Auto> nichtGeparkteAutos = new ArrayList<>();
     AutoFactory autoFactory = new AutoFactory();//reposetori
+
     /**
  * ersetzen
  */
     for (int i = 1; i <= 5; i++) {
         autosErzeugen(magicParkhaus,autoFactory);
-        Auto auto = new Auto(i,"rot","porsche"); //autos erstellen
+        Auto auto = new Auto(i,"rot",AutoMarken.values()[0]); //autos erstellen
         alleAutos.add(auto.zeigInfo());
 
         if (!cityParkhaus.einparken(auto)){  //erstellte autos in parkhaus stellen
@@ -214,6 +215,7 @@ void main() {
  * @param magicParkhaus
  * @param autoFactory
  */
-void autosErzeugen(Parkhaus magicParkhaus,AutoFactory autoFactory) {
+Object autosErzeugen(Parkhaus magicParkhaus,AutoFactory autoFactory) {
     magicParkhaus.einparken(autoFactory.createAuto());
+    return autoFactory;
 }
