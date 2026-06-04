@@ -13,6 +13,8 @@ void main() {
     ArrayList<Auto> nichtGeparkteAutos = new ArrayList<>();
     AutoFactory autoFactory = new AutoFactory();//reposetori
 
+    boolean debug=true;
+
     /**
  * ersetzen
  */
@@ -194,6 +196,28 @@ void main() {
                 for (Auto auto : alleAutos){
                     IO.println("ID: " + auto.getId());
                 }
+
+                if (debug) {
+                    IO.println("in alleAutos");
+                }
+
+                IO.println("Es existieren Autos mit ");
+                for (Auto auto : cityParkhaus.parkendeAutos){
+                    IO.println("ID: " + auto.getId());
+                }
+
+                if (debug) {
+                    IO.println("in cityParkhaus");
+                }
+
+                IO.println("Es existieren Autos mit ");
+                for (Auto auto : magicParkhaus.parkendeAutos){
+                    IO.println("ID: " + auto.getId());
+                }
+                if (debug) {
+                    IO.println("in magicParkhaus");
+                }
+
                 break;
 
             case 5:
