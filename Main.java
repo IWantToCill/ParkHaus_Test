@@ -1,6 +1,5 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import javax.lang.model.type.NullType;
 import java.util.Scanner;
 
 void main() {
@@ -12,10 +11,12 @@ void main() {
 
     ArrayList<Auto> alleAutos = new ArrayList<Auto> (); // gess wat Alle autos liste
     ArrayList<Auto> nichtGeparkteAutos = new ArrayList<>();
-/**
+    AutoFactory autoFactory = new AutoFactory();//reposetori
+    /**
  * ersetzen
  */
     for (int i = 1; i <= 5; i++) {
+        autosErzeugen(magicParkhaus,autoFactory);
         Auto auto = new Auto(i,"rot","porsche"); //autos erstellen
         alleAutos.add(auto.zeigInfo());
 
@@ -24,7 +25,7 @@ void main() {
         };
     }
 
-    AutoFactory autoFactory = new AutoFactory();//reposetori
+
 
     for (int i = 0; i < alleAutos.size(); i++){
         cityParkhaus.ausparken(alleAutos.get(i));  //alle autos aus dem cityParkhaus ausparken
@@ -207,6 +208,12 @@ void main() {
 
 }
 
-void autosErzeugen() {
-
+/**
+ * Die Metode autosErzeugen erzeugt ein auto objeckt in dem parkhaus magic
+ *
+ * @param magicParkhaus
+ * @param autoFactory
+ */
+void autosErzeugen(Parkhaus magicParkhaus,AutoFactory autoFactory) {
+    magicParkhaus.einparken(autoFactory.createAuto());
 }
