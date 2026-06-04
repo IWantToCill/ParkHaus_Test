@@ -23,7 +23,6 @@ void main() {
         Auto auto = new Auto(i,"rot",AutoMarken.values()[0]); //autos erstellen
         alleAutos.add(magicParkhaus.einparken(auto.zeigInfo())); //erstellte autos in parkhaus stellen
 
-
     }
 
 
