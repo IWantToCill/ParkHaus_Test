@@ -13,7 +13,7 @@ void main() {
     ArrayList<Auto> nichtGeparkteAutos = new ArrayList<>();
     AutoFactory autoFactory = new AutoFactory();//reposetori
 
-    boolean debug = true;
+    boolean debug = false;
     //ersetzen
     for (int i = 1; i <= 5; i++) {
         autosErzeugen(magicParkhaus,autoFactory);
@@ -41,6 +41,7 @@ void main() {
 
         int wahl = scanner.nextInt();           //Die getroffene auswahl
         scanner.nextLine();
+
 
         switch (wahl) {                         //und hier kommen die dazugehörigen "geschehnisse"
             case 1:
