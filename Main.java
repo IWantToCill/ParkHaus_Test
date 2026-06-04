@@ -198,7 +198,7 @@ void main() {
                 }
 
                 if (debug) {
-                    IO.println("in alleAutos");
+                    IO.println(" in alleAutos");
                 }
 
                 IO.println("Es existieren Autos mit ");
