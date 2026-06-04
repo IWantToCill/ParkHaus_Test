@@ -23,7 +23,7 @@ void main() {
 
         if (!cityParkhaus.einparken(auto)){  //erstellte autos in parkhaus stellen
             magicParkhaus.einparken(auto);
-        };
+        }
     }
 
 
