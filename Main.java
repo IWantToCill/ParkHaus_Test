@@ -212,8 +212,8 @@ void main() {
 /**
  * Die Metode autosErzeugen erzeugt ein auto objeckt in dem parkhaus magic
  *
- * @param magicParkhaus
- * @param autoFactory
+ * @param magicParkhaus das parkhaus in dem das erzeugte auto geparkt wird
+ * @param autoFactory autoFactory erzeugt das auto objekt
  */
 Object autosErzeugen(Parkhaus magicParkhaus,AutoFactory autoFactory) {
     magicParkhaus.einparken(autoFactory.createAuto());
