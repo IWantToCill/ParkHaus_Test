@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 void main() {
     Scanner scanner = new Scanner(System.in); //neuer scanner wird erstellt? // \(o.o)/
-    IO.println(String.format("Hello and a happy welcome!"));
+    IO.println("Hello and a happy welcome!");
 
     Parkhaus cityParkhaus = new Parkhaus(3); // parkheuser werden erstellt mus noch liste / stadt plan anlegen
     Parkhaus magicParkhaus = new Parkhaus(9999);
@@ -13,11 +13,8 @@ void main() {
     ArrayList<Auto> nichtGeparkteAutos = new ArrayList<>();
     AutoFactory autoFactory = new AutoFactory();//reposetori
 
-    boolean debug=true;
-
-    /**
- * ersetzen
- */
+    boolean debug = true;
+    //ersetzen
     for (int i = 1; i <= 5; i++) {
         autosErzeugen(magicParkhaus,autoFactory);
         Auto auto = new Auto(i,"rot",AutoMarken.values()[0]); //autos erstellen
@@ -27,9 +24,8 @@ void main() {
 
 
 
-    for (int i = 0; i < alleAutos.size(); i++){
-        cityParkhaus.ausparken(alleAutos.get(i));  //alle autos aus dem cityParkhaus ausparken
-
+    for (Auto auto : cityParkhaus.parkendeAutos){
+        cityParkhaus.ausparken(auto);  //alle autos aus dem cityParkhaus ausparken
     }
 
     IO.println("---Parkhaus verwaltung---");     //was man so tun kann
@@ -147,13 +143,12 @@ void main() {
 
                 for (Auto auto : alleAutos){
                     if (idUmparken == auto.getId()){                                    // alle autos nach dem korektem auto objekt durchsuchen
-                        Auto gesuchtAuto = auto;
-                        if (cityParkhaus.parkendeAutos.contains(gesuchtAuto)){          // ist das gesucht auto in city?
+                        if (cityParkhaus.parkendeAutos.contains(auto)){          // ist das gesucht auto in city?
                             cityParkhaus.ausparken(auto);
                             magicParkhaus.einparken(auto);
                             IO.println("Auto wurde aus City Parkhaus umgeparkt");
                             break;
-                        } else if (magicParkhaus.parkendeAutos.contains(gesuchtAuto)) { // oder ist das gesuchte auto in magic?
+                        } else if (magicParkhaus.parkendeAutos.contains(auto)) { // oder ist das gesuchte auto in magic?
                             magicParkhaus.ausparken(auto);
                             cityParkhaus.einparken(auto);
                             IO.println("Auto wurde aus Magic Parkhaus umgeparkt");
