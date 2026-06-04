@@ -19,16 +19,16 @@ public class Parkhaus {
      * @param auto
      * @return true bei erfolgreichem einparken / false bei bereits vollem Parkhaus
      */
-    public boolean einparken(Auto auto){
+    public Auto einparken(Auto auto){
         if (parkendeAutos.size() < maxKapazitaet){ //überprüfung ob das parkhas voll ist
             parkendeAutos.add(auto);
             IO.println("Auto eingeparkt! Anzahl autos: " + parkendeAutos.size());
-            return true;
+            return auto;
         }
         else {
             IO.println("Parkhaus voll!");
             IO.println(String.format(parkendeAutos.toString()));
-            return false;
+            return auto;
         }
     }
 

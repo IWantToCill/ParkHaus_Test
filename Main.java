@@ -21,11 +21,9 @@ void main() {
     for (int i = 1; i <= 5; i++) {
         autosErzeugen(magicParkhaus,autoFactory);
         Auto auto = new Auto(i,"rot",AutoMarken.values()[0]); //autos erstellen
-        alleAutos.add(auto.zeigInfo());
+        alleAutos.add(magicParkhaus.einparken(auto.zeigInfo())); //erstellte autos in parkhaus stellen
 
-        if (!cityParkhaus.einparken(auto)){  //erstellte autos in parkhaus stellen
-            magicParkhaus.einparken(auto);
-        }
+
     }
 
 
@@ -240,6 +238,5 @@ void main() {
  * @param autoFactory autoFactory erzeugt das auto objekt
  */
 Object autosErzeugen(Parkhaus magicParkhaus,AutoFactory autoFactory) {
-    magicParkhaus.einparken(autoFactory.createAuto());
-    return autoFactory;
+    return magicParkhaus.einparken(autoFactory.createAuto());
 }
