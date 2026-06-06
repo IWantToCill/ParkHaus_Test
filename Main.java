@@ -6,12 +6,12 @@ void main() {
     Scanner scanner = new Scanner(System.in); //neuer scanner wird erstellt? // \(o.o)/
     IO.println("Hello and a happy welcome!");
 
-    Parkhaus cityParkhaus = new Parkhaus(3); // parkheuser werden erstellt mus noch liste / stadt plan anlegen
+    Parkhaus cityParkhaus = new Parkhaus(3); // parkhäuser werden erstellt mus noch liste / stadt plan anlegen
     Parkhaus magicParkhaus = new Parkhaus(9999);
 
-    ArrayList<Auto> alleAutos = new ArrayList<Auto> (); // gess wat Alle autos liste
+    ArrayList<Auto> alleAutos = new ArrayList<> (); // guess wat Alle autos liste
     ArrayList<Auto> nichtGeparkteAutos = new ArrayList<>();
-    AutoFactory autoFactory = new AutoFactory();//reposetori
+    AutoFactory autoFactory = new AutoFactory();//Tolle Sache
 
     boolean debug = false;
     //ersetzen
@@ -227,7 +227,7 @@ void main() {
 }
 
 /**
- * Die Metode autosErzeugen erzeugt ein auto objeckt in dem parkhaus magic
+ * Die Methode autosErzeugen erzeugt ein auto objekt in dem parkhaus magic
  *
  * @param magicParkhaus das parkhaus in dem das erzeugte auto geparkt wird
  * @param autoFactory autoFactory erzeugt das auto objekt
