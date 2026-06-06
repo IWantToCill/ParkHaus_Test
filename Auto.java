@@ -3,11 +3,11 @@
  */
 public class Auto {
     private int id;
-    private String farbe;
+    private Farben farbe;
     private AutoMarken marke;
     private int geschwindigkeit;
 
-    public Auto(int id, String farbe, AutoMarken marke) {
+    public Auto(int id, Farben farbe, AutoMarken marke) {
 
         this.id = id;
         this.farbe = farbe;

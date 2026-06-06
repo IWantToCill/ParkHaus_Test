@@ -17,7 +17,7 @@ void main() {
     //ersetzen
     for (int i = 1; i <= 5; i++) {
         autosErzeugen(magicParkhaus,autoFactory);
-        Auto auto = new Auto(i,"rot",AutoMarken.values()[0]); //autos erstellen
+        Auto auto = new Auto(i,Farben.values()[0],AutoMarken.values()[0]); //autos erstellen
         alleAutos.add(magicParkhaus.einparken(auto.zeigInfo())); //erstellte autos in parkhaus stellen
 
     }

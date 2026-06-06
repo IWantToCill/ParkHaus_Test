@@ -9,7 +9,7 @@ public class AutoFactory {
 
     /**
      * Erzeugt ein neues Auto objekt mit id, farbe und marke.
-     * dfsdfsddasadsas
+     *
      * @return Das Neu erzeugte Auto objekt
      */
     public Auto createAuto(){
@@ -18,8 +18,10 @@ public class AutoFactory {
         AutoMarken autoMarke = AutoMarken.values()[markenIndex];
 
         // Test
+        int farbenIndex = random.nextInt(Farben.values().length);
+        Farben  farben = Farben.values()[farbenIndex];
 
-        Auto auto = new Auto(id ,"Rot",autoMarke);
+        Auto auto = new Auto(id ,farben,autoMarke);
         this.id++;
         return auto;
     }
